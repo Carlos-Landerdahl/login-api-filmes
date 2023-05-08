@@ -1,26 +1,27 @@
 {
     "env": {
-        "browser": true,
-        "es2021": true
+        "browser": true, // Ambiente de navegador
+        "es2021": true, // Suporte a recursos do ECMAScript 2021
+        "node": true
     },
     "settings": {
         "react": {
-            "version": "detect"
+            "version": "detect" // Detecta automaticamente a versão do React
         }
     },
     "extends": [
-        "eslint:recommended",
-        "plugin:react/recommended",
-        "plugin:@typescript-eslint/recommended",
-        "plugin:prettier/recommended",
-        "prettier"
+        "eslint:recommended", // Conjunto básico de regras recomendadas pelo ESLint
+        "plugin:react/recommended", // Conjunto de regras recomendadas para o React
+        "plugin:@typescript-eslint/recommended", // Conjunto de regras recomendadas para o TypeScript
+        "plugin:prettier/recommended", // Integração com o Prettier
+        "prettier" // Desabilita regras de estilo conflitantes com o Prettier
     ],
     "overrides": [
     ],
-    "parser": "@typescript-eslint/parser",
+    "parser": "@typescript-eslint/parser", // Utiliza o parser do TypeScript
     "parserOptions": {
-        "ecmaVersion": "latest",
-        "sourceType": "module"
+        "ecmaVersion": "latest", // Suporte à última versão do ECMAScript
+        "sourceType": "module" // Permite o uso de import/export do ECMAScript
     },
     "plugins": [
         "react",
@@ -29,14 +30,14 @@
         "eslint-plugin-import-helpers"
     ],
     "rules": {
-        "react-hooks/rules-of-hooks": "error",
-        "react-hooks/exhaustive-deps": "warn",
-        "react/react-in-jsx-scope": "off",
-        "prettier/prettier": "error",
+        "react-hooks/rules-of-hooks": "error", // Regra para garantir que os hooks sejam chamados corretamente
+        "react-hooks/exhaustive-deps": "warn", // Verifica as dependências de useEffect e similares
+        "react/react-in-jsx-scope": "off", // Desabilita a necessidade de importar o React no escopo do JSX
+        "prettier/prettier": "error", // Aplica as regras do Prettier como erros
         "import-helpers/order-imports": [
             "warn",
             {
-                "newlinesBetween": "always",
+                "newlinesBetween": "always", // Exige uma linha em branco entre os grupos de importação
                 "groups": [
                     ["/^react/", "/^next/", "/@next/"],
                     "/components/",
@@ -45,7 +46,7 @@
                     "/absolute/",
                     ["parent", "sibling", "index"]
                 ],
-                "alphabetize": { "order": "asc", "ignoreCase": true }
+                "alphabetize": { "order": "asc", "ignoreCase": true } // Ordena os imports em ordem alfabética, ignorando maiúsculas e minúsculas
             }
         ]
     }
