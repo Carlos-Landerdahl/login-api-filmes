@@ -63,6 +63,11 @@ export const ContainerForm = styled('section', {
       },
     },
 
+    small: {
+      color: '$red',
+      fontSize: '14px',
+    },
+
     '.termos': {
       display: 'flex',
       alignItems: 'center',
