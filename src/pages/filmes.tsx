@@ -1,5 +1,7 @@
 import Head from 'next/head';
 
+import { ListaFilmes } from '@/components/filmes';
+
 export default function Filmes() {
   return (
     <>
@@ -13,7 +15,7 @@ export default function Filmes() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main>
-        <h1>Filmes</h1>
+        <ListaFilmes />
       </main>
     </>
   );
