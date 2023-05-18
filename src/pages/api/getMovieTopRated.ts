@@ -1,10 +1,10 @@
 import axios from 'axios';
-const key = 'b2d67c77d4b9d542fecc365e88421442';
+const key = process.env.NEXT_PUBLIC_TMDB_API_KEY;
 
-export async function getMovies() {
+export async function getMoviesTopRated() {
   try {
     const response = await axios.get(
-      `https://api.themoviedb.org/3/movie/popular?api_key=${key}&language=en-US&page=1`
+      `https://api.themoviedb.org/3/movie/top_rated?api_key=${key}&language=en-US&page=1`
     );
     return response.data.results;
   } catch (error) {
